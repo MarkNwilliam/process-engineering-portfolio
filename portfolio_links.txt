@@ -1,0 +1,19 @@
+Process engineering portfolio
+
+GitHub repo: https://github.com/MarkNwilliam/process-engineering-portfolio
+Live site: https://marknwilliam.github.io/process-engineering-portfolio/
+
+1. Waxy crude flow assurance
+The model screens a subsea line for wax margin, pressure loss and thermal limits.
+Dashboard: https://marknwilliam.github.io/process-engineering-portfolio/waxy-crude-flow-assurance/dashboard.html
+Code: https://github.com/MarkNwilliam/process-engineering-portfolio/tree/main/waxy-crude-flow-assurance
+
+2. Crude separation flowsheet
+The flowsheet pumps, preheats, separates, desalts and stabilises crude. Mass and energy balances close through a water cut disturbance.
+Dashboard: https://marknwilliam.github.io/process-engineering-portfolio/process-flowsheet-simulator/dashboard.html
+Code: https://github.com/MarkNwilliam/process-engineering-portfolio/tree/main/process-flowsheet-simulator
+
+3. Production chemistry toolkit
+The toolkit checks water quality, sulfate scaling, mixing compatibility and treatment train arithmetic.
+Dashboard: https://marknwilliam.github.io/process-engineering-portfolio/production-chemistry-toolkit/dashboard.html
+Code: https://github.com/MarkNwilliam/process-engineering-portfolio/tree/main/production-chemistry-toolkit
