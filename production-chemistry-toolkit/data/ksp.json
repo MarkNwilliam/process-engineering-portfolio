@@ -1,0 +1,15 @@
+{
+  "ksp_25c": {
+    "BaSO4": 1.1e-10,
+    "SrSO4": 3.2e-7,
+    "CaSO4": 2.4e-5,
+    "CaCO3": 3.3e-9
+  },
+  "mineral_molar_mass_g_mol": {
+    "BaSO4": 233.39,
+    "SrSO4": 183.68,
+    "CaSO4": 136.14,
+    "CaCO3": 100.09
+  },
+  "source": "Sulfate and carbonate Ksp values from the high barium formation water study at https://www.sciencedirect.com/science/article/pii/S1876382012300647"
+}

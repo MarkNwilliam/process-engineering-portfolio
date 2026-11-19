@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Process engineering portfolio</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 0; background: #f5f8fb; color: #152238; }
+header { background: linear-gradient(120deg, #0f2d46, #1f6f8b); color: white; padding: 2.4rem max(2rem, 6vw); }
+header h1 { margin: 0 0 0.5rem; font-size: 2rem; }
+header p { margin: 0; color: #d8e8f2; max-width: 720px; }
+main { max-width: 1180px; margin: auto; padding: 2rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.4rem; }
+.card { background: white; border: 1px solid #ccd6e0; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 12px rgba(21, 34, 56, 0.07); }
+.card img { width: 100%; display: block; height: 180px; object-fit: cover; border-bottom: 1px solid #ccd6e0; }
+.card-body { padding: 1.1rem; }
+.card h2 { margin: 0 0 0.5rem; font-size: 1.15rem; }
+.card p { color: #52627a; font-size: 0.92rem; }
+a { color: #145a86; font-weight: bold; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.footer { margin-top: 2rem; color: #52627a; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<header>
+<h1>Chemical and process engineering portfolio</h1>
+<p>Three projects that connect waxy crude flow assurance, process simulation and production chemistry. Each case uses sourced data, tested arithmetic and a visual dashboard.</p>
+</header>
+<main>
+<div class="cards">
+<div class="card">
+<img src="waxy-crude-flow-assurance/docs/figures/envelope.png" alt="Waxy crude envelope chart">
+<div class="card-body">
+<h2>1. Waxy crude flow assurance</h2>
+<p>Screens a subsea line for wax margin, pressure loss and thermal limits with published crude properties and field geometry.</p>
+<p><a href="waxy-crude-flow-assurance/dashboard.html">Open dashboard</a></p>
+<p><a href="waxy-crude-flow-assurance/README.md">Read case study</a></p>
+</div>
+</div>
+<div class="card">
+<img src="process-flowsheet-simulator/docs/figures/flowsheet.png" alt="Crude flowsheet">
+<div class="card-body">
+<h2>2. Crude separation flowsheet</h2>
+<p>Pumps, preheats, separates, desalts and stabilises crude. Mass and energy balances close through a water cut disturbance.</p>
+<p><a href="process-flowsheet-simulator/dashboard.html">Open dashboard</a></p>
+<p><a href="process-flowsheet-simulator/README.md">Read case study</a></p>
+</div>
+</div>
+<div class="card">
+<img src="production-chemistry-toolkit/docs/figures/scaling_screen.png" alt="Scaling screen chart">
+<div class="card-body">
+<h2>3. Production chemistry toolkit</h2>
+<p>Checks water analysis quality, sulfate scaling, mixing compatibility, carbonate tendency and treatment train arithmetic.</p>
+<p><a href="production-chemistry-toolkit/dashboard.html">Open dashboard</a></p>
+<p><a href="production-chemistry-toolkit/README.md">Read case study</a></p>
+</div>
+</div>
+</div>
+<p class="footer">All dashboards are generated from the project scripts. Figures are regenerated with each dashboard build.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "feed": {
+    "total_liquid_m3_d": 3280.0,
+    "density_kg_m3": 818.0,
+    "water_cut": 0.2,
+    "gas_kg_s": 2.0,
+    "temperature_c": 30.0,
+    "pressure_bar": 1.5,
+    "source": "IISTE ISDE 2020 gives 3280 m3/d. IOP 2021 gives 818 kg/m3. Water cut, gas rate, temperature, and inlet pressure are assumptions for this demo."
+  },
+  "wash_water_kg_s": 0.3,
+  "settings": {
+    "pump_discharge_bar": 5.0,
+    "pump_efficiency": 0.75,
+    "separator_temperature_c": 60.0,
+    "heat_exchanger_effectiveness": 0.7,
+    "gas_split": 0.95,
+    "water_recovery": 0.9,
+    "oil_to_water": 0.02,
+    "desalter_water_recovery": 0.95,
+    "desalter_oil_carryunder": 0.01,
+    "stabilizer_gas_recovery": 0.9,
+    "stabilizer_pressure_bar": 1.5,
+    "liquid_density_kg_m3": 850.0
+  }
+}

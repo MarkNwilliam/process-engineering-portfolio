@@ -1,0 +1,16 @@
+{
+  "influent": {
+    "oil_mg_l": 120.0,
+    "suspended_solids_mg_l": 80.0,
+    "bacteria_count_per_ml": 10000.0,
+    "scale_precipitation_mg_l": 1860.0
+  },
+  "steps": [
+    {"name": "De-oiling hydrocyclone", "target": "oil_mg_l", "removal_fraction": 0.9},
+    {"name": "Dissolved gas flotation", "target": "oil_mg_l", "removal_fraction": 0.75},
+    {"name": "Media filtration", "target": "suspended_solids_mg_l", "removal_fraction": 0.85},
+    {"name": "Scale inhibitor", "target": "scale_precipitation_mg_l", "removal_fraction": 0.95},
+    {"name": "Biocide", "target": "bacteria_count_per_ml", "log_reduction": 2.0}
+  ],
+  "source": "Removal fractions are screening assumptions, not vendor guarantees or plant measurements"
+}

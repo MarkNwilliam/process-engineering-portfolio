@@ -1,0 +1,56 @@
+{
+  "fluids": [
+    {
+      "name": "IOP 2021 light waxy crude",
+      "api": 41.4,
+      "density_kg_m3": 818.0,
+      "viscosity_mpa_s": 1.75,
+      "viscosity_temperature_c": 30.0,
+      "wat_c": 30.0,
+      "pour_point_c": 18.0,
+      "wax_fraction": 0.1615,
+      "source": "IOP Conf. Ser.: MSE 1142 (2021) 012008"
+    },
+    {
+      "name": "Shunbei heavy waxy crude",
+      "api": 19.1,
+      "density_kg_m3": 940.0,
+      "viscosity_mpa_s": 6.47,
+      "viscosity_temperature_c": 20.0,
+      "wat_c": 17.31,
+      "pour_point_c": 12.0,
+      "wax_fraction": 0.0446,
+      "source": "Energies 2016, 9(10), 758"
+    }
+  ],
+  "field_cases": [
+    {
+      "name": "Field X subsea line",
+      "wat_c": 26.0,
+      "inlet_temperature_c": [45.0, 50.0],
+      "inlet_pressure_bar": 25.0,
+      "length_m": 10000.0,
+      "riser_height_m": 200.0,
+      "internal_diameters_m": [0.24, 0.29, 0.34],
+      "wall_thickness_m": 0.013,
+      "roughness_m": 0.000025,
+      "pipe_thermal_conductivity_w_m_k": 45.0,
+      "ambient_temperature_c": 5.0,
+      "minimum_outlet_pressure_bar": 11.0,
+      "flow_rates_m3_d": [1640.0, 2460.0, 3280.0],
+      "source": "IISTE ISDE 2020, Effect of Wax Deposition and Pigging on Flow Assurance in a Subsea Pipeline"
+    }
+  ],
+  "additive_cases": [
+    {
+      "name": "Shunbei surfactant case",
+      "dosage_mg_l": 100.0,
+      "reported_pump_pressure_reduction_pct": 30.0,
+      "heating_temperature_before_c": 68.0,
+      "heating_temperature_after_c": 63.0,
+      "wax_fraction": 0.237,
+      "pour_point_c": 30.2,
+      "source": "Energies 2016, 9(10), 758"
+    }
+  ]
+}

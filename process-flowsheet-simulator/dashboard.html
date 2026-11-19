@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crude separation flowsheet</title>
+<style>
+:root { --ink: #152238; --muted: #52627a; --line: #ccd6e0; --blue: #1f6f8b; --green: #2f855a; --amber: #d68b3e; }
+body { font-family: Arial, sans-serif; margin: 0; background: #f5f8fb; color: var(--ink); }
+header { background: linear-gradient(120deg, #123b33, #2f855a); color: white; padding: 2.2rem max(2rem, 6vw); }
+header h1 { margin: 0 0 0.4rem; font-size: 1.8rem; }
+header p { margin: 0; color: #dceee6; }
+main { max-width: 1180px; margin: auto; padding: 1.8rem 2rem 3rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.8rem; }
+.card { background: white; border: 1px solid var(--line); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(21, 34, 56, 0.05); }
+.card .label { color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.card .value { font-size: 1.5rem; font-weight: bold; margin-top: 0.3rem; }
+.figures { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 2rem; }
+.figures figure { margin: 0; background: white; border: 1px solid var(--line); border-radius: 10px; padding: 0.8rem; }
+.figures img { width: 100%; display: block; border-radius: 6px; }
+.figures figcaption { color: var(--muted); font-size: 0.85rem; margin-top: 0.5rem; }
+figure.wide { grid-column: 1 / -1; }
+table { border-collapse: collapse; width: 100%; margin-bottom: 2rem; background: white; }
+th, td { border: 1px solid var(--line); padding: 0.55rem; text-align: right; }
+th { background: #eef3f8; }
+.note { color: var(--muted); font-size: 0.9rem; }
+@media (max-width: 800px) { .figures { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+<h1>Crude separation and stabilisation</h1>
+<p>Pump, preheat, separate, desalt and stabilise with closed balances.</p>
+</header>
+<main>
+<div class="cards">
+<div class="card"><div class="label">Feed rate</div><div class="value">3280</div><div class="note">m3/d</div></div>
+<div class="card"><div class="label">Separator temperature</div><div class="value">60 C</div></div>
+<div class="card"><div class="label">Mass balance error</div><div class="value">2.1e-16</div></div>
+<div class="card"><div class="label">Energy balance error</div><div class="value">1.2e-16</div></div>
+<div class="card"><div class="label">Heater duty</div><div class="value">1.313</div><div class="note">MW, base case</div></div>
+</div>
+<div class="figures">
+<figure class="wide"><img src="docs/figures/flowsheet.png" alt="Process flowsheet"><figcaption>Train layout, including hot oil preheat and three product routes.</figcaption></figure>
+<figure><img src="docs/figures/disturbance.png" alt="Product response to water cut"><figcaption>Water cut disturbance moves mass from stabilised oil to produced water.</figcaption></figure>
+<figure><img src="docs/figures/utilities.png" alt="Utility duty"><figcaption>Heater duty rises with water cut. Pump shaft power stays flat.</figcaption></figure>
+</div>
+<table>
+<thead>
+<tr><th>Case</th><th>Mass error</th><th>Energy error</th><th>Heater duty, MW</th><th>Pump shaft, kW</th><th>Separator water, kg/s</th><th>Stabilised oil, kg/s</th><th>Converged</th></tr>
+</thead>
+<tbody>
+<tr><td>Base</td><td>2.13e-16</td><td>1.24e-16</td><td>1.313</td><td>17.0</td><td>5.590</td><td>24.159</td><td>yes</td></tr>
+<tr><td>Feed water cut 30 percent</td><td>0.00e+00</td><td>-4.36e-16</td><td>1.615</td><td>17.0</td><td>8.384</td><td>21.161</td><td>yes</td></tr>
+</tbody>
+</table>
+<p class="note">The separator, desalter, and stabilizer use fixed split factors. They are not equilibrium flash models. Water cut and gas rate are stated assumptions; only feed rate and liquid density come from published sources.</p>
+</main>
+</body>
+</html>

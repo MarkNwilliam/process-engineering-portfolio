@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Production chemistry toolkit</title>
+<style>
+:root { --ink: #152238; --muted: #52627a; --line: #ccd6e0; --blue: #1f6f8b; --green: #2f855a; --amber: #d68b3e; }
+body { font-family: Arial, sans-serif; margin: 0; background: #f5f8fb; color: var(--ink); }
+header { background: linear-gradient(120deg, #2b1f46, #6b4c9a); color: white; padding: 2.2rem max(2rem, 6vw); }
+header h1 { margin: 0 0 0.4rem; font-size: 1.8rem; }
+header p { margin: 0; color: #e6dcf2; }
+main { max-width: 1180px; margin: auto; padding: 1.8rem 2rem 3rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.8rem; }
+.card { background: white; border: 1px solid var(--line); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(21, 34, 56, 0.05); }
+.card .label { color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.card .value { font-size: 1.5rem; font-weight: bold; margin-top: 0.3rem; }
+.figures { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 2rem; }
+.figures figure { margin: 0; background: white; border: 1px solid var(--line); border-radius: 10px; padding: 0.8rem; }
+.figures img { width: 100%; display: block; border-radius: 6px; }
+.figures figcaption { color: var(--muted); font-size: 0.85rem; margin-top: 0.5rem; }
+figure.wide { grid-column: 1 / -1; }
+table { border-collapse: collapse; width: 100%; margin-bottom: 2rem; background: white; }
+th, td { border: 1px solid var(--line); padding: 0.55rem; text-align: right; }
+th { background: #eef3f8; }
+.note { color: var(--muted); font-size: 0.9rem; }
+@media (max-width: 800px) { .figures { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+<h1>Production chemistry and produced water</h1>
+<p>Water quality, scale risk and treatment arithmetic from published brines.</p>
+</header>
+<main>
+<div class="cards">
+<div class="card"><div class="label">Source waters</div><div class="value">6</div></div>
+<div class="card"><div class="label">Canyon charge error</div><div class="value">0.10 percent</div></div>
+<div class="card"><div class="label">BaSO4 precipitate</div><div class="value">1869</div><div class="note">mg/L in 50:50 mix</div></div>
+<div class="card"><div class="label">BaSO4 saturation</div><div class="value">1.1e+06</div></div>
+<div class="card"><div class="label">Treatment balance error</div><div class="value">0.0e+00</div></div>
+</div>
+<div class="figures">
+<figure class="wide"><img src="docs/figures/ion_profiles.png" alt="Ion profiles"><figcaption>Published ion analyses. The scale ion panel drives the mixing compatibility screen.</figcaption></figure>
+<figure><img src="docs/figures/scaling_screen.png" alt="Scaling screen"><figcaption>Barite dominates the mixed water risk. Values above one are supersaturated.</figcaption></figure>
+<figure><img src="docs/figures/treatment_train.png" alt="Treatment train reduction"><figcaption>Stepwise reduction against the assumed treatment train.</figcaption></figure>
+</div>
+<h2>Source brines</h2>
+<table>
+<thead><tr><th>Brine</th><th>TDS, mg/L</th><th>Charge error, percent</th></tr></thead>
+<tbody><tr><td>Canyon Sands Formation water</td><td>108852</td><td>0.10</td></tr>
+<tr><td>Barton seawater</td><td>31852</td><td>-1.89</td></tr>
+<tr><td>Angsi seawater</td><td>34620</td><td>2.35</td></tr>
+<tr><td>High barium formation water</td><td>117989</td><td>2.57</td></tr>
+<tr><td>IOP 6334 sewage</td><td>4080</td><td>-185.15</td></tr>
+<tr><td>IOP 5423 source well</td><td>5016</td><td>-44.13</td></tr></tbody>
+</table>
+<h2>Compatibility screen for 50 percent high barium water and Barton seawater</h2>
+<table>
+<thead><tr><th>Mineral</th><th>Saturation ratio</th><th>Activity correction used</th></tr></thead>
+<tbody><tr><td>BaSO4</td><td>1.12e+06</td><td>no</td></tr>
+<tr><td>SrSO4</td><td>103</td><td>no</td></tr>
+<tr><td>CaSO4</td><td>9.34</td><td>no</td></tr></tbody>
+</table>
+<p>BaSO4 precipitate: 1869 mg/L.</p>
+<h2>Treatment train</h2>
+<table>
+<thead><tr><th>Step</th><th>Target</th><th>Inlet</th><th>Outlet</th></tr></thead>
+<tbody><tr><td>De-oiling hydrocyclone</td><td>oil_mg_l</td><td>120.00</td><td>12.00</td></tr>
+<tr><td>Dissolved gas flotation</td><td>oil_mg_l</td><td>12.00</td><td>3.00</td></tr>
+<tr><td>Media filtration</td><td>suspended_solids_mg_l</td><td>80.00</td><td>12.00</td></tr>
+<tr><td>Scale inhibitor</td><td>scale_precipitation_mg_l</td><td>1860.00</td><td>93.00</td></tr>
+<tr><td>Biocide</td><td>bacteria_count_per_ml</td><td>10000.00</td><td>100.00</td></tr></tbody>
+</table>
+<p class="note">Treatment removal fractions are screening assumptions. Davies correction is off when ionic strength exceeds 0.5 M. Two IOP water rows omit sodium and are not charge balanced.</p>
+</main>
+</body>
+</html>

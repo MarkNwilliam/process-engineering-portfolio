@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waxy crude flow assurance envelope</title>
+<style>
+:root { --ink: #152238; --muted: #52627a; --line: #ccd6e0; --blue: #1f6f8b; --green: #2f855a; --amber: #d68b3e; }
+body { font-family: Arial, sans-serif; margin: 0; background: #f5f8fb; color: var(--ink); }
+header { background: linear-gradient(120deg, #0f2d46, #1f6f8b); color: white; padding: 2.2rem max(2rem, 6vw); }
+header h1 { margin: 0 0 0.4rem; font-size: 1.8rem; }
+header p { margin: 0; color: #d8e8f2; }
+main { max-width: 1180px; margin: auto; padding: 1.8rem 2rem 3rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.8rem; }
+.card { background: white; border: 1px solid var(--line); border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(21, 34, 56, 0.05); }
+.card .label { color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.card .value { font-size: 1.5rem; font-weight: bold; margin-top: 0.3rem; }
+.figures { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-bottom: 2rem; }
+.figures figure { margin: 0; background: white; border: 1px solid var(--line); border-radius: 10px; padding: 0.8rem; }
+.figures img { width: 100%; display: block; border-radius: 6px; }
+.figures figcaption { color: var(--muted); font-size: 0.85rem; margin-top: 0.5rem; }
+figure.wide { grid-column: 1 / -1; }
+table { border-collapse: collapse; width: 100%; margin-bottom: 2rem; background: white; }
+th, td { border: 1px solid var(--line); padding: 0.55rem; text-align: right; }
+th { background: #eef3f8; }
+.pass { background: #eef8f1; }
+.check { background: #fff4e5; }
+.note { color: var(--muted); font-size: 0.9rem; }
+@media (max-width: 800px) { .figures { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+<h1>Waxy crude flow assurance</h1>
+<p>IOP 2021 light waxy crude. Field X subsea line. Sourced properties, tested hydraulics, honest limits.</p>
+</header>
+<main>
+<div class="cards">
+<div class="card"><div class="label">Wax appearance</div><div class="value">30.0 C</div></div>
+<div class="card"><div class="label">Overall U</div><div class="value">0.834</div><div class="note">W/m2/K</div></div>
+<div class="card"><div class="label">Minimum outlet</div><div class="value">11 bar</div></div>
+<div class="card"><div class="label">Riser static head</div><div class="value">16 bar</div><div class="note">At 818 kg/m3 and 200 m</div></div>
+</div>
+<div class="figures">
+<figure class="wide"><img src="docs/figures/thermal_profile.png" alt="Axial temperature profile"><figcaption>Bulk temperature falls through the 10 km line. The shaded band sits below wax appearance temperature.</figcaption></figure>
+<figure><img src="docs/figures/envelope.png" alt="Flow assurance envelope"><figcaption>Outlet temperature and pressure across the published flow range.</figcaption></figure>
+<figure><img src="docs/figures/operating_status.png" alt="Operating status grid"><figcaption>Horizontal line status against wax margin and pressure target.</figcaption></figure>
+</div>
+<h2>Horizontal line</h2><table><thead><tr><th>Flow, m3/d</th><th>Inlet, C</th><th>Outlet, C</th><th>Outlet, bar</th><th>Wax solid</th><th>Viscosity, cP</th><th>Status</th></tr></thead><tbody><tr class='pass'><td>1640</td><td>45</td><td>36.2</td><td>24.8</td><td>0.0000</td><td>1.43</td><td>pass</td></tr>
+<tr class='pass'><td>2460</td><td>45</td><td>38.9</td><td>24.5</td><td>0.0000</td><td>1.40</td><td>pass</td></tr>
+<tr class='pass'><td>3280</td><td>45</td><td>40.3</td><td>24.1</td><td>0.0000</td><td>1.38</td><td>pass</td></tr>
+<tr class='pass'><td>1640</td><td>50</td><td>40.1</td><td>24.8</td><td>0.0000</td><td>1.32</td><td>pass</td></tr>
+<tr class='pass'><td>2460</td><td>50</td><td>43.1</td><td>24.5</td><td>0.0000</td><td>1.29</td><td>pass</td></tr>
+<tr class='pass'><td>3280</td><td>50</td><td>44.8</td><td>24.2</td><td>0.0000</td><td>1.27</td><td>pass</td></tr></tbody></table>
+<h2>Line with 200 m riser</h2><table><thead><tr><th>Flow, m3/d</th><th>Inlet, C</th><th>Outlet, C</th><th>Outlet, bar</th><th>Wax solid</th><th>Viscosity, cP</th><th>Status</th></tr></thead><tbody><tr class='check'><td>1640</td><td>45</td><td>36.2</td><td>8.8</td><td>0.0000</td><td>1.43</td><td>check</td></tr>
+<tr class='check'><td>2460</td><td>45</td><td>38.9</td><td>8.6</td><td>0.0000</td><td>1.40</td><td>check</td></tr>
+<tr class='check'><td>3280</td><td>45</td><td>40.3</td><td>8.2</td><td>0.0000</td><td>1.38</td><td>check</td></tr>
+<tr class='check'><td>1640</td><td>50</td><td>40.1</td><td>8.9</td><td>0.0000</td><td>1.32</td><td>check</td></tr>
+<tr class='check'><td>2460</td><td>50</td><td>43.1</td><td>8.6</td><td>0.0000</td><td>1.29</td><td>check</td></tr>
+<tr class='check'><td>3280</td><td>50</td><td>44.8</td><td>8.3</td><td>0.0000</td><td>1.27</td><td>check</td></tr></tbody></table>
+<p class="note">A 200 m riser at 818 kg/m3 needs about 16 bar of static head. A 25 bar inlet cannot leave 11 bar at the outlet after friction. The horizontal case isolates thermal and wax margin. The riser case shows the data gap.</p>
+<p class="note">The model uses published fluid properties and field geometry. Deposit growth, internal film resistance, and field pressure validation are outside this demo.</p>
+</main>
+</body>
+</html>
