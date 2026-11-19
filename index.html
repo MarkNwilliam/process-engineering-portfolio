@@ -22,6 +22,17 @@ a:hover { text-decoration: underline; }
 .documents { margin-top: 2rem; }
 .documents h2 { font-size: 1.2rem; }
 .documents p { color: #52627a; font-size: 0.92rem; }
+.doc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.2rem; margin-top: 1rem; }
+.doc-panel { background: white; border: 1px solid #ccd6e0; border-radius: 12px; padding: 1rem; }
+.doc-panel h3 { margin: 0 0 0.6rem; font-size: 1rem; color: #0f2d46; }
+.doc-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin: 0 0 0.7rem; }
+.doc-actions a { display: inline-block; padding: 0.35rem 0.7rem; border-radius: 6px; background: #145a86; color: #ffffff; font-size: 0.86rem; }
+.pdf-preview { width: 100%; height: 620px; border: 1px solid #cbd5df; border-radius: 8px; background: #ffffff; }
+.verification { margin-top: 1.4rem; padding: 1rem 1.2rem; background: #fff8dc; border: 2px solid #c8102e; border-radius: 12px; }
+.verification h2 { font-size: 1.2rem; }
+.verification p { color: #52627a; font-size: 0.92rem; }
+.verification ul { margin: 0.6rem 0 0 1.2rem; }
+.badge { display: inline-block; background: #c8102e; color: #ffffff; font-size: 0.75rem; font-weight: bold; padding: 0.15rem 0.5rem; border-radius: 999px; margin-right: 0.4rem; }
 </style>
 </head>
 <body>
@@ -68,9 +79,38 @@ a:hover { text-decoration: underline; }
 </div>
 <section class="documents">
 <h2>Current application documents</h2>
-<p><a href="documents/cv_totalenergies_junior_process_engineer.pdf">Download current CV</a></p>
-<p><a href="documents/cover_totalenergies_junior_process_engineer.pdf">Download current cover letter</a></p>
-<p>These are the versions attached to the TotalEnergies Junior Process Engineer application.</p>
+<p>Open or download each file below.</p>
+<div class="doc-grid">
+<div class="doc-panel">
+<h3>Current CV</h3>
+<div class="doc-actions">
+<a href="documents/cv_totalenergies_junior_process_engineer.pdf" target="_blank" rel="noopener">Open PDF</a>
+<a href="documents/cv_totalenergies_junior_process_engineer.pdf" download>Download PDF</a>
+</div>
+<object class="pdf-preview" data="documents/cv_totalenergies_junior_process_engineer.pdf" type="application/pdf" aria-label="Current CV PDF preview">
+<p>Your browser cannot display the PDF here. <a href="documents/cv_totalenergies_junior_process_engineer.pdf">Open the current CV</a>.</p>
+</object>
+</div>
+<div class="doc-panel">
+<h3>Current cover letter</h3>
+<div class="doc-actions">
+<a href="documents/cover_totalenergies_junior_process_engineer.pdf" target="_blank" rel="noopener">Open PDF</a>
+<a href="documents/cover_totalenergies_junior_process_engineer.pdf" download>Download PDF</a>
+</div>
+<object class="pdf-preview" data="documents/cover_totalenergies_junior_process_engineer.pdf" type="application/pdf" aria-label="Current cover letter PDF preview">
+<p>Your browser cannot display the PDF here. <a href="documents/cover_totalenergies_junior_process_engineer.pdf">Open the current cover letter</a>.</p>
+</object>
+</div>
+</div>
+</section>
+<section class="verification">
+<h2>Verification documents</h2>
+<p><span class="badge">Added</span> Redacted public copies of the academic records that support the education claims in the CV.</p>
+<ul>
+<li><a href="documents/academic_transcript.pdf">Academic transcript</a></li>
+<li><a href="documents/degree_certificate.pdf">Degree certificate</a></li>
+<li><a href="certificates/index.html">Course and professional certificate index</a></li>
+</ul>
 </section>
 <p class="footer">All dashboards are generated from the project scripts. Figures are regenerated with each dashboard build.</p>
 </main>

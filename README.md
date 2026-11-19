@@ -32,6 +32,10 @@ Read the [case study](production-chemistry-toolkit/README.md) or open the [dashb
 
 The [certificate index](certificates/index.html) lists 23 Coursera course certificates and 48 AIChE, SAChE and RAPID certificate PDFs. Each entry links to the full PDF.
 
+## Academic documents
+
+The site publishes redacted public copies of the [academic transcript](documents/academic_transcript.pdf) and [degree certificate](documents/degree_certificate.pdf). Redactions hide registration numbers, date of birth, student identifiers and certificate serial numbers.
+
 ## Current application documents
 
 The current [CV](documents/cv_totalenergies_junior_process_engineer.pdf) and [cover letter](documents/cover_totalenergies_junior_process_engineer.pdf) attached to the TotalEnergies Junior Process Engineer application are published here.
