@@ -20,3 +20,7 @@ Code: https://github.com/MarkNwilliam/process-engineering-portfolio/tree/main/pr
 
 Certificates
 Index: https://marknwilliam.github.io/process-engineering-portfolio/certificates/index.html
+
+Current application documents
+CV: https://marknwilliam.github.io/process-engineering-portfolio/documents/cv_totalenergies_junior_process_engineer.pdf
+Cover letter: https://marknwilliam.github.io/process-engineering-portfolio/documents/cover_totalenergies_junior_process_engineer.pdf

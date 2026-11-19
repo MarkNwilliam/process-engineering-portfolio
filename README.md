@@ -32,6 +32,10 @@ Read the [case study](production-chemistry-toolkit/README.md) or open the [dashb
 
 The [certificate index](certificates/index.html) lists 23 Coursera course certificates and 48 AIChE, SAChE and RAPID certificate PDFs. Each entry links to the full PDF.
 
+## Current application documents
+
+The current [CV](documents/cv_totalenergies_junior_process_engineer.pdf) and [cover letter](documents/cover_totalenergies_junior_process_engineer.pdf) attached to the TotalEnergies Junior Process Engineer application are published here.
+
 ## Run locally
 
 Each project has no third party requirement beyond Python 3.9 and matplotlib for figures. Run from each project folder:
