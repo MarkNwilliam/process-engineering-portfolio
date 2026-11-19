@@ -28,6 +28,10 @@ Checks water analysis quality, sulfate scaling, mixing compatibility, carbonate 
 
 Read the [case study](production-chemistry-toolkit/README.md) or open the [dashboard](production-chemistry-toolkit/dashboard.html).
 
+## Certificates
+
+The [certificate index](certificates/index.html) lists 23 Coursera course certificates and 48 AIChE, SAChE and RAPID certificate PDFs. Each entry links to the full PDF.
+
 ## Run locally
 
 Each project has no third party requirement beyond Python 3.9 and matplotlib for figures. Run from each project folder:

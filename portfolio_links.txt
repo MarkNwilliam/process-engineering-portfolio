@@ -17,3 +17,6 @@ Code: https://github.com/MarkNwilliam/process-engineering-portfolio/tree/main/pr
 The toolkit checks water quality, sulfate scaling, mixing compatibility and treatment train arithmetic.
 Dashboard: https://marknwilliam.github.io/process-engineering-portfolio/production-chemistry-toolkit/dashboard.html
 Code: https://github.com/MarkNwilliam/process-engineering-portfolio/tree/main/production-chemistry-toolkit
+
+Certificates
+Index: https://marknwilliam.github.io/process-engineering-portfolio/certificates/index.html
